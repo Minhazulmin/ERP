@@ -61,13 +61,6 @@ const routes = [
             { path: '/invoice/:id', name: 'invoice.show', component: () => import('./../views/backend/Invoice/View'), beforeEnter: authGuard },
             { path: '/invoice/:id/edit', name: 'invoice.edit', component: () => import('./../views/backend/Invoice/Create'), beforeEnter: authGuard },
 
-
-
-
-
-
-
-
             // ------------------ADMIN PORTION------------------
             { path: '/dashboard', name: 'admin.dashboard', meta: { title: 'Dashboard', nav: true }, component: () => import('./../views/backend/Admin/Dashboard'), beforeEnter: authGuard },
             { path: '/sitemap', name: 'admin.sitemap', component: () => import('./../views/backend/Admin/Sitemap'), beforeEnter: authGuard },
@@ -96,6 +89,11 @@ const routes = [
             // ------------------ACTIVITY LOG PORTION------------------
             { path: '/activityLog', name: 'activityLog.index', meta: { title: 'Activity Log', nav: true }, component: () => import('./../views/backend/System/ActivityLog/Index'), beforeEnter: authGuard },
             { path: '/activityLog/:id', name: 'activityLog.show', component: () => import('./../views/backend/System/ActivityLog/View'), beforeEnter: authGuard },
+        
+            { path: '/test', name: 'test.index', meta: { title: 'Test', nav: true }, component: () => import('./../views/backend/Test/Index'), beforeEnter: authGuard },
+            { path: '/test/create', name: 'test.create', component: () => import('./../views/backend/Test/Create'), beforeEnter: authGuard },
+            { path: '/test/:id', name: 'test.show', component: () => import('./../views/backend/Test/View'), beforeEnter: authGuard },
+            { path: '/test/:id/edit', name: 'test.edit', component: () => import('./../views/backend/Test/Create'), beforeEnter: authGuard },
         ]
     },
 

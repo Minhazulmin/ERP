@@ -79,5 +79,7 @@ Route::group(['namespace' => 'Backend', 'middleware' => 'auth:admin'], function 
         // PARENT MENU FOR PERMISSION (only for 2nd level parent menu)
         Route::get('cparent', 'PMenuController@content')->name('content.content');
         Route::get('gparent', 'PMenuController@galleryImages')->name('gallery.galleryImages');
+
+        Route::resource('test',   'TestController');
     });
 });
